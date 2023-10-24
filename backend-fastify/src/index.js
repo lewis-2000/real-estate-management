@@ -56,7 +56,7 @@ setFastifyRoutes(fastify);
 setFastifyWebsocket();
 
 mongoose
-  .connect(process.env.DB_CONNECT, {
+  .connect("mongodb://localhost:27017/property", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
   })
